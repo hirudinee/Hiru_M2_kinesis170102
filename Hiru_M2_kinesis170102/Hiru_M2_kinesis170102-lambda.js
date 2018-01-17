@@ -2,7 +2,8 @@ let AWS = require('aws-sdk');
 const kinesis = new AWS.Kinesis();
 exports.handler = function (event, context, callback) {
 
-
+	console.log(event);
+	console.log(context);
 
 	kinesis.describeStream({
 		StreamName: 'Hiru_Stream'
@@ -17,6 +18,8 @@ exports.handler = function (event, context, callback) {
 			callback(null, err);
 			
 		});
+
+
 
 
 
