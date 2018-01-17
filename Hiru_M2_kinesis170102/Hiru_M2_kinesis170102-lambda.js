@@ -5,7 +5,7 @@ exports.handler = function (event, context, callback) {
 	console.log(event);
 	console.log(context);
 
-	console.log('val 01 = ',event.Records);
+	console.log('val 01 = ',event[object.keys(event)[0]]);
 
 	kinesis.describeStream({
 		StreamName: 'Hiru_Stream'
